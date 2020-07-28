@@ -3,7 +3,7 @@
 Usage:
 
 ```
-    from ImageNetV2_dataset import ImageNetV2
+    from ImageNetV2_dataset import ImageNetV2Dataset
     from torch.utils.data import DataLoader
 
     dataset = ImageNetV2Dataset("matched-frequency") # supports matched-frequency, threshold-0.7, top-images variants
