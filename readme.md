@@ -1,5 +1,11 @@
 # Pytorch Dataloader for ImageNet V2
 
+First Install
+
+```
+pip install git+https://github.com/modestyachts/ImageNetV2_pytorch
+```
+
 Usage:
 
 ```
