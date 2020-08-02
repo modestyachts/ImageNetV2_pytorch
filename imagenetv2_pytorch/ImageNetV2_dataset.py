@@ -41,6 +41,8 @@ class ImageNetV2Dataset(Dataset):
             print("Extracting....")
             tarfile.open(self.tar_root).extractall(f"{location}")
             shutil.move(FNAMES[variant], self.dataset_root)
+            self.fnames = list(self.dataset_root.glob("**/*.jpeg"))
+        
 
     def __len__(self):
         return len(self.fnames)
