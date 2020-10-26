@@ -40,7 +40,7 @@ class ImageNetV2Dataset(Dataset):
                     assert False, f"Downloading from {URLS[variant]} failed"
             print("Extracting....")
             tarfile.open(self.tar_root).extractall(f"{location}")
-            shutil.move(FNAMES[variant], self.dataset_root)
+            shutil.move(f"{location}/{FNAMES[variant]}", self.dataset_root)
             self.fnames = list(self.dataset_root.glob("**/*.jpeg"))
         
 
