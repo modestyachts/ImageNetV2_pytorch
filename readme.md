@@ -1,12 +1,10 @@
 # Pytorch Dataloader for ImageNet V2
 
-Credit to @Vaishaal for the original library  
-This fork is to fix the broken path issue
 
 First Install
 
 ```
-pip install git+https://github.com/chuanhao01/ImageNetV2_pytorch
+pip install git+https://github.com/vaishaal/ImageNetV2_pytorch
 ```
 
 Usage:
