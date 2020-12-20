@@ -4,7 +4,7 @@
 First Install
 
 ```
-pip install git+https://github.com/vaishaal/ImageNetV2_pytorch
+pip install git+https://github.com/modestyachts/ImageNetV2_pytorch
 ```
 
 Usage:
