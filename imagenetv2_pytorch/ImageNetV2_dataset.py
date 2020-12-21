@@ -19,10 +19,11 @@ FNAMES = {"matched-frequency" : "imagenetv2-matched-frequency-format-val",
 DATASET_SIZE = 10000
 
 class ImageNetV2Dataset(Dataset):
-    def __init__(self, variant="matched-frequency", location="."):
+    def __init__(self, variant="matched-frequency", transform=None, location="."):
         self.dataset_root = pathlib.Path(f"{location}/ImageNetV2-{variant}/")
         self.tar_root = pathlib.Path(f"{location}/ImageNetV2-{variant}.tar.gz")
         self.fnames = list(self.dataset_root.glob("**/*.jpeg"))
+        self.transform = transform
         assert variant in URLS, f"unknown V2 Variant: {variant}"
         if not self.dataset_root.exists() or len(self.fnames) != DATASET_SIZE:
             if not self.tar_root.exists():
@@ -48,7 +49,10 @@ class ImageNetV2Dataset(Dataset):
         return len(self.fnames)
 
     def __getitem__(self, i):
-        return Image.open(self.fnames[i]), int(self.fnames[i].parent.name)
+        img, label = Image.open(self.fnames[i]), int(self.fnames[i].parent.name)
+        if self.transform is not None:
+            img = self.transform(img)
+        return img, label
 
 
 
