@@ -9,7 +9,7 @@ from torch.utils.data import Dataset, DataLoader
 
 URLS = {"matched-frequency" : "https://imagenetv2public.s3-us-west-2.amazonaws.com/imagenetv2-matched-frequency.tar.gz",
         "threshold-0.7" : "https://imagenetv2public.s3-us-west-2.amazonaws.com/imagenetv2-threshold0.7.tar.gz",
-        "top-images": "https://imagenetv2public.s3-us-west-2.amazonaws.com/imagenetv2-topimages.tar.gz"}
+        "top-images": "https://imagenetv2public.s3-us-west-2.amazonaws.com/imagenetv2-top-images.tar.gz"}
 
 FNAMES = {"matched-frequency" : "imagenetv2-matched-frequency-format-val",
         "threshold-0.7" : "imagenetv2-threshold0.7-format-val",
