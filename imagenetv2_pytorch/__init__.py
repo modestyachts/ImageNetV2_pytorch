@@ -1,1 +1,1 @@
-from .ImageNetV2_dataset import ImageNetV2Dataset
+from .ImageNetV2_dataset import ImageNetV2Dataset, ImageNetValDataset
